@@ -10,7 +10,7 @@
         <p>Please fill out the form below to find your new pet!</p>
         <p>Required fields are followed by <span aria-label="required">*</span>.</p>
 
-        <form method="GET" action="/search-results"></form>
+        <form method="GET" action="/search-results">
         <label>Select the type of pet you want to adopt <span aria-label="required">*</span></label>
         <br>
         <select name="type">
@@ -32,7 +32,7 @@
 <!--        <label for="bird">Bird</label>-->
         <br>
         <label>What is your five-digit postal code? <span aria-label="required">*</span></label>
-        <input type="text" id="postal-code" name="postal-code"/>
+        <input type="text" id="postal-code" name="postal-code" inputmode="numeric" pattern="\d*" minlength="5" maxlength="5"/>
         <br>
         <label>Select the distance you'd like to look from you</label>
         <select name="distance">
@@ -41,6 +41,9 @@
             <option value="50">50</option>
             <option value="100">100</option>
         </select>
+        <br>
+        <input type="submit"/>
+            </form>
     </section>
 
 {% endblock %}

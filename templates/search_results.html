@@ -4,15 +4,16 @@
 
 {% block content %}
 <h2>Here are your results!</h2>
-    <ul>
+    <div>
     {% for pet in animals %}
-        <li>{{ pet['name'] }}</li>
-        <li>{{ pet['gender'] }}</li>
-        <li>{{ pet['age'] }}</li>
-        <li>{{ pet['description'] }}</li>
-        <li>{{ pet['url'] }}</li>
+        {{ pet['name'] }}<br>
+        {{ pet['gender'] }}<br>
+        {{ pet['age'] }}<br>
+        {{ pet['description'] }}<br>
+        {{ pet['url'] }}<br>
+        <br>
         <br>
     {% endfor %}
-    </ul>
+    </div>
 
 {% endblock %}

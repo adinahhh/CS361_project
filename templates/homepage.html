@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Fur Finder{% endblock %}
+
+{% block content %}
+
+    <section>
+        <h2>Welcome to Fur Finder!</h2>
+
+        <p>Please fill out the form below to find your new pet!</p>
+        <p>Required fields are followed by <span aria-label="required">*</span>.</p>
+
+        <form method="GET" action="/search-results"></form>
+        <label>Select the type of pet you want to adopt <span aria-label="required">*</span></label>
+        <br>
+        <select name="type">
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="rabbit">Rabbit</option>
+            <option value="bird">Bird</option>
+        </select>
+<!--        <input type="radio" id="cat" name="type" value="cat"/>-->
+<!--        <label for="cat">Cat</label>-->
+<!--        <br>-->
+<!--        <input type="radio" id="dog" name="type" value="dog"/>-->
+<!--        <label for="dog">Dog</label>-->
+<!--        <br>-->
+<!--        <input type="radio" id="rabbit" name="type" value="rabbit"/>-->
+<!--        <label for="rabbit">Rabbit</label>-->
+<!--        <br>-->
+<!--        <input type="radio" id="bird" name="type" value="bird"/>-->
+<!--        <label for="bird">Bird</label>-->
+        <br>
+        <label>What is your five-digit postal code? <span aria-label="required">*</span></label>
+        <input type="text" id="postal-code" name="postal-code"/>
+        <br>
+        <label>Select the distance you'd like to look from you</label>
+        <select name="distance">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+    </section>
+
+{% endblock %}

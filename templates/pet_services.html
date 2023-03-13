@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Fur Finder{% endblock %}
+
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <section class="px-3">
+        <h2 class="lead">Find an animal professional near you!</h2>
+
+        <p>Please fill out the form below to find services for your new pet!</p>
+        <p>Required fields are followed by <span aria-label="required">*</span>.</p>
+
+        <form method="GET" action="/pet-services-results">
+        <label>Select the type of service you need for your pet.<span aria-label="required">*</span></label>
+        <br>
+        <select name="service">
+            <option value="pet groomer">Pet Groomer</option>
+            <option value="vet clinic">Veterinary Clinic</option>
+            <option value="pet store">Pet store</option>
+            <option value="pet training">Pet training</option>
+        </select>
+
+        <br>
+        <label>What is your five-digit postal code? <span aria-label="required">*</span></label>
+        <input type="text" id="zipcode" name="zipcode" inputmode="numeric" pattern="\d*" minlength="5" maxlength="5"/>
+        <br>
+        <label>Select the distance you'd like to look from you.</label>
+        <select name="distance">
+            <option value=10>10</option>
+            <option value=25>25</option>
+            <option value=50>50</option>
+            <option value=100>100</option>
+        </select>
+        <br>
+        <input type="submit" class="btn btn-sm btn-light fw-bold border-white bg-white"/>
+            </form>
+    </section>
+
+{% endblock %}

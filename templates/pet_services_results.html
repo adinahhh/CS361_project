@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Fur Finder Search Results{% endblock %}
+
+{% block content %}
+<br>
+<h2>Here are your results!</h2>
+    <div>
+    {% for business in data %}
+        Name: {{ business['name'] }}<br>
+        Google Maps Rating: {{ business['rating'] }} stars <br>
+        Distance: {{ business['distance_miles'] }} miles<br>
+<!--        Place_Id: {{ business['place_id'] }}<br>-->
+        <br>
+        <br>
+    {% endfor %}
+    </div>
+    <br>
+    <p>If you do not like the results of your search, please click "Home" on the top left and try again.</p>
+
+{% endblock %}

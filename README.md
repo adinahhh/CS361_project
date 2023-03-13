@@ -38,4 +38,4 @@ Once my microservice receives your message, it will send back a JSON response in
 [{"name": "TYLER", "url": "https://www.petfinder.com/dog/tyler-59931916/ga/atlanta/fulton-county-animal-services-ga217/?referrer_id=18777580-e00f-4a0e-afd1-d540ca6d9663", "gender": "Male", "age": "Senior", "description": null}]
 ```
 The JSON response includes a pet's name, url to their profile on PetFinder, gender, age, and a description, if any. The
-response above is only one pet. There will be 10 pets total in the response.
+response above is only one pet. There will be 12 pets total in the response.

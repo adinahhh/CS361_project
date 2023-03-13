@@ -18,7 +18,7 @@ while True:
     time.sleep(3)
 
     pf = petpy.Petfinder(key=constants.API_KEY, secret=constants.API_SECRET)
-    response = pf.animals(location=str(message["zipcode"]), distance=int(message["distance"]), results_per_page=int(10))
+    response = pf.animals(location=str(message["zipcode"]), distance=int(message["distance"]), results_per_page=int(12))
 
     # build response back to user
     animal_list = []

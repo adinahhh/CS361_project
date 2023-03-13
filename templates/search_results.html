@@ -3,17 +3,20 @@
 {% block title %}Fur Finder Search Results{% endblock %}
 
 {% block content %}
+<br>
 <h2>Here are your results!</h2>
+    <br>
     <div>
-    {% for pet in animals %}
-        {{ pet['name'] }}<br>
-        {{ pet['gender'] }}<br>
-        {{ pet['age'] }}<br>
-        {{ pet['description'] }}<br>
-        {{ pet['url'] }}<br>
-        <br>
-        <br>
-    {% endfor %}
+        {% for pet in animals +%}
+            <h3>{{ pet['name'] }}</h3>
+            <img src="{{ pet['photo'] }}"/><br>
+            Gender: {{ pet['gender'] }}<br>
+            Age: {{ pet['age'] }}<br>
+            {{ pet['name'] }}'s Bio: {{ pet['description'] }}<br>
+            <h5><a href="{{ pet['url'] }}" target="_blank">Find out how to adopt {{ pet['name'] }}</a></h5>
+            <br>
+            <br>
+        {% endfor %}
     </div>
     <br>
     <p>If you do not like the results of your search, please click "Home" on the top left and try again.</p>
